@@ -1,0 +1,525 @@
+// Rishi Salvi
+// 4/25/23
+// BioMon.java
+// The game will help 9th grade biology student understand the importance of 
+// certain adaptations and ecological niches are in an organism. By playing the 
+// game, they will be able to understand how characteristics benefit organisms
+// and why they evolved to have them. 
+
+// graphics imports
+import java.awt.Graphics;
+import java.awt.Color;
+import java.awt.Font;
+// image/file IO imports
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+// layout imports
+import java.awt.GridLayout;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.CardLayout;
+// JComponents imports
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JCheckBox;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.JLabel;
+import javax.swing.JSlider;
+import javax.swing.JScrollPane;
+import javax.swing.JScrollBar;
+import java.awt.Dimension;
+import java.awt.Insets; 
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+// listener imports
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.AdjustmentListener;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.MouseListener; 
+import java.awt.event.MouseEvent; 
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+// makes the panel that holds everything, including all of the card layouts
+public class BioMon
+{
+    public BioMon()
+    {
+    }
+    public static void main(String [] args)
+    {
+        BioMon bm = new BioMon();
+        bm.run();
+    }
+    public void run()
+    {
+        JFrame frame = new JFrame("BioMon");
+        frame.setSize(800, 700);
+        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+        frame.setLocation(0,0);
+        frame.setResizable(true);
+        BioMonHolder bmh = new BioMonHolder();
+        frame.getContentPane().add(bmh);
+        frame.setVisible(true);
+    }
+}
+
+// holder for the first card layout that opens when user runs the program
+// contains the Start, Login, Instructions, Settings, and GameHolder panels
+class BioMonHolder extends JPanel
+{
+    public BioMonHolder()
+    {
+        setBackground(Color.CYAN);
+        CardLayout cards = new CardLayout();
+        setLayout(cards);
+        Information in = new Information(); 
+        StartPanel sp = new StartPanel(this, cards, in); 
+        add(sp, "Start"); 
+        LoginPanel lp = new LoginPanel(this, cards, in); 
+        add(lp, "Login");
+        InstructionPanel ip = new InstructionPanel(this, cards); 
+        add(ip, "Instructions");  
+        SettingPanel sep = new SettingPanel(this, cards); 
+        add(sep, "Settings");  
+        GamePanelHolder gph = new GamePanelHolder(this, cards); 
+        add(gph, "Game"); 
+    }
+}
+
+// panel that first opens when user runs the program; contains multiple
+// buttons that they can click to change panels; the game is locked until
+// the user logs in; they can close the program by clicking quit at the 
+// bottom; has a null layout
+class StartPanel extends JPanel
+{
+	private BioMonHolder bmh; // instance of CardLayout container
+	private CardLayout cards; // instance of CardLayout
+	private Information info; // instance of Information class (used to 
+							  // check username/logged in)
+	private JButton startButton; // JButton that changes to GamePanelHolder
+	private JButton instructButton; // JButton that changes to Instructions
+	private JButton loginButton; // JButton that changes to Login
+	private JButton quit; // JButton that closes the program
+	public StartPanel(BioMonHolder bmhIn, CardLayout cardsIn, Information infoIn)
+	{
+		setLayout(null); 
+		setBackground(new Color(173, 216, 230)); 
+		bmh = bmhIn; 
+		cards = cardsIn; 
+		info = infoIn; 
+		
+		Font titleFont = new Font("Monospaced", Font.BOLD, 40); 
+		Font buttonFont = new Font("TimesRoman", Font.PLAIN, 20); 
+		
+		JLabel title = new JLabel("BioMon"); 
+		title.setFont(titleFont); 
+		title.setBounds(325, 50, 200, 50); 
+		add(title); 
+		
+		// all of the buttons
+		ButtonHandler bh = new ButtonHandler(); 
+		startButton = new JButton("START"); 
+		startButton.setFont(buttonFont); 
+		startButton.setBounds(300, 175, 200, 50); 
+		startButton.addActionListener(bh); 
+		add(startButton); 
+		instructButton = new JButton("INSTRUCTIONS"); 
+		instructButton.setFont(buttonFont); 
+		instructButton.setBounds(300, 300, 200, 50); 
+		instructButton.addActionListener(bh); 
+		add(instructButton); 
+		loginButton = new JButton("LOGIN"); 
+		loginButton.setFont(buttonFont); 
+		loginButton.setBounds(300, 425, 200, 50); 
+		loginButton.addActionListener(bh); 
+		add(loginButton); 
+		quit = new JButton("QUIT"); 
+		quit.setFont(buttonFont); 
+		quit.setBounds(300, 550, 200, 50); 
+		quit.addActionListener(bh); 
+		add(quit); 
+	}
+	
+	// handler class for all of the buttons; changes the card layout
+	// depending on what the user has pressed and if they have met the
+	// prerequirements (getLogged() == true)
+	class ButtonHandler implements ActionListener
+	{
+		public void actionPerformed(ActionEvent evt)
+		{
+			if (evt.getSource() == startButton && info.getLogged())
+				cards.show(bmh, "Game"); 
+			else if(evt.getSource() == instructButton)
+				cards.show(bmh, "Instructions"); 
+			else if (evt.getSource() == loginButton)
+				cards.show(bmh, "Login"); 
+			else if (evt.getSource() == quit)
+				System.exit(0); // closes program
+		}
+	}
+}
+
+// panel that holds the instructions; user can change their setting for 
+// what section the instructions are on; back button to go back to start; 
+// BorderLayout (w/ North/Center)
+class InstructionPanel extends JPanel
+{
+	private BioMonHolder bmh; // instance of CardLayout container
+	private CardLayout cards; // instance of CardLayout
+	private JButton back; // JButton that changes to Start 
+	private JMenuBar sections; // JMenuBar that changes instruction sections
+	private JTextArea instructions; // JTextArea that shows the instructions 
+									// for a section
+	private JLabel sectionName; // JLabel that changes to show the current section
+	public InstructionPanel(BioMonHolder bmhIn, CardLayout cardsIn)
+	{
+		setLayout(new BorderLayout()); 
+		setBackground(new Color(144, 238, 144)); 
+		bmh = bmhIn; 
+		cards = cardsIn; 
+		
+		ComponentPanel compPanel = new ComponentPanel(); 
+		add(compPanel, BorderLayout.NORTH); 
+		
+		TextAreaPanel taPanel = new TextAreaPanel();
+		add(taPanel, BorderLayout.CENTER); 
+	}
+	
+	// JPanel that holds the JButton and JMenuBar
+	class ComponentPanel extends JPanel
+	{
+		public ComponentPanel()
+		{
+			setBackground(new Color(144, 238, 144)); 
+			setLayout(new FlowLayout(FlowLayout.CENTER, 300, 20)); 
+			Font buttonFont = new Font("TimesRoman", Font.PLAIN, 20);
+			back = new JButton("Back"); 
+			ButtonHandler bh = new ButtonHandler(); 
+			back.addActionListener(bh); 
+			back.setFont(buttonFont); 
+			add(back); 
+			
+			sections = new JMenuBar();
+			JMenu sectionsList = new JMenu("Sections");
+			sectionsList.setFont(buttonFont); 
+			sections.add(sectionsList); 
+			add(sections); 
+		}
+	}
+	
+	//JPanel that holds the JTextArea
+	class TextAreaPanel extends JPanel
+	{
+		public TextAreaPanel()
+		{
+			setLayout(new FlowLayout(FlowLayout.CENTER, 200, 20));
+			setBackground(new Color(144, 238, 144)); 
+			
+			Font buttonFont = new Font("TimesRoman", Font.PLAIN, 20);
+			Font titleFont = new Font("Monospaced", Font.BOLD, 40);  
+			
+			sectionName = new JLabel("name of section"); 
+			sectionName.setFont(titleFont); 
+			add(sectionName); 
+			
+			instructions = new JTextArea("instructions!");
+			instructions.setFont(buttonFont);
+			instructions.setLineWrap(true);
+			instructions.setWrapStyleWord(true);
+			instructions.setOpaque(false);
+			instructions.setEditable(false);
+			instructions.setMargin(new Insets(10,10,10,10));
+			JScrollPane scroller = new JScrollPane(instructions);
+			scroller.setPreferredSize(new Dimension(500, 400)); 
+			add(scroller);
+		}
+	}
+	
+	// handler for the back button at the top-left (goes to start page)
+	class ButtonHandler implements ActionListener
+	{
+		public void actionPerformed(ActionEvent evt)
+		{
+			cards.first(bmh); 
+		}
+	}
+}
+
+// panel that makes the user login in order to create a save or access 
+// a previous save; has a JTextField where user enters their name; Images
+// that represent the characters that the user can be; has 2 JButtons - 
+// one to go to start and one to go to settings; BorderLayout(w/ North/Center)
+class LoginPanel extends JPanel
+{
+	private BioMonHolder bmh; // instance of CardLayout container
+	private CardLayout cards; // instance of CardLayout
+	private JTextField username; // JTextField where user enters their name
+	private JButton back; // JButton to go back to Start
+	private JButton settings;  // JButton to go to Settings
+	private Information info; // instance of Information class (used to 
+							  // check username/logged in)
+	private Image char1; // Image of the first sprite/option
+	private Image char2;  // Image of the second sprite/option
+	public LoginPanel(BioMonHolder bmhIn, CardLayout cardsIn, Information infoIn)
+	{
+		setLayout(new BorderLayout());
+		setBackground(new Color(238, 144, 231)); 
+		bmh = bmhIn; 
+		cards = cardsIn; 
+		info = infoIn; 
+		
+		ButtonPanel bp = new ButtonPanel(); 
+		add(bp, BorderLayout.NORTH); 
+		
+		TextPanel tp = new TextPanel();
+		add(tp, BorderLayout.CENTER); 
+	}
+	
+	// holds both of the buttons
+	class ButtonPanel extends JPanel
+	{
+		public ButtonPanel()
+		{
+			setBackground(new Color(238, 144, 231)); 
+			setLayout(new FlowLayout(FlowLayout.CENTER, 300, 20)); 
+			Font buttonFont = new Font("TimesRoman", Font.PLAIN, 20); 
+			back = new JButton("Back"); 
+			BListener bl = new BListener(); 
+			back.addActionListener(bl); 
+			back.setFont(buttonFont); 
+			add(back); 
+			settings = new JButton("Settings"); 
+			settings.setFont(buttonFont); 
+			settings.addActionListener(bl); 
+			add(settings); 
+		}
+	}
+	
+	// has place for user to enter their name as well as two JLabels that
+	// serve as instructions
+	class TextPanel extends JPanel
+	{
+		public TextPanel()
+		{
+			setLayout(new FlowLayout(FlowLayout.CENTER, 200, 50)); 
+			setBackground(new Color(238, 144, 231)); 
+			Font buttonFont = new Font("TimesRoman", Font.PLAIN, 20); 
+			Font titleFont = new Font("Monospaced", Font.BOLD, 40);
+			 
+			JLabel enter = new JLabel("Enter Username:"); 
+			enter.setFont(titleFont); 
+			add(enter); 
+		
+			username = new JTextField(); 
+			username.setFont(buttonFont); 
+			username.setPreferredSize(new Dimension(400, 30));
+			TFListener tf = new TFListener(); 
+			username.addActionListener(tf);
+			add(username); 
+		
+			JLabel characterInfo = new JLabel("Select your character:"); 
+			characterInfo.setFont(titleFont); 
+			add(characterInfo); 
+			
+			char1 = getMyImage("pictures/C1-F-P1.png"); 
+			char2 = getMyImage("pictures/C2-F-P1.png"); 
+		}
+		public Image getMyImage(String pictName) // loads both of the images
+		{
+			Image picture = null;
+			try
+			{
+				picture = ImageIO.read(new File(pictName));
+			}    
+			catch (IOException e)
+			{
+				System.err.println("\n\n" + pictName + " can't be found.\n\n");
+				e.printStackTrace();
+			}
+			return picture;
+		}
+		public void paintComponent(Graphics g) // draws the images
+		{
+			super.paintComponent(g); 
+			g.drawImage(char1, -50, 175, 600, 600, this); 
+			g.drawImage(char2, 275, 175, 600, 600, this); 
+		}
+	}
+	
+	// listener for the textfield - sends info to Information class
+	class TFListener implements ActionListener
+	{
+		public void actionPerformed(ActionEvent evt)
+		{
+			String userInfo = username.getText(); 
+			info.setName(userInfo); 
+			info.setLogged(true); 
+		}
+	}
+	
+	// listener for buttons - changes the panel depending on the button
+	class BListener implements ActionListener
+	{
+		public void actionPerformed(ActionEvent evt)
+		{
+			if (info.getLogged() && evt.getSource() == settings)
+				cards.show(bmh, "Settings"); 
+			if (info.getLogged() && evt.getSource() == back)
+				cards.show(bmh, "Start"); 
+		}
+	}
+}
+
+// gives user option to change settings; contains 1 JButton to go back 
+// to login panel; FlowLayout (CENTER)
+class SettingPanel extends JPanel
+{
+	private BioMonHolder bmh; // instance of CardLayout container
+	private CardLayout cards; // instance of CardLayout
+	private JButton back; // JButton that goes back to Login
+	public SettingPanel(BioMonHolder bmhIn, CardLayout cardsIn)
+	{
+		setLayout(new BorderLayout()); 
+		setBackground(new Color(237, 80, 80)); 
+		bmh = bmhIn; 
+		cards = cardsIn; 
+		Font titleFont = new Font("Monospaced", Font.BOLD, 40); 
+		Font buttonFont = new Font("TimesRoman", Font.PLAIN, 20); 
+		
+		JPanel buttonPanel = new JPanel();
+		setBackground(new Color(237, 80, 80));
+		setLayout(new FlowLayout(FlowLayout.CENTER, 300, 20)); 
+		back = new JButton("Back"); 
+		BListener bl = new BListener(); 
+		back.addActionListener(bl); 
+		back.setFont(buttonFont); 
+		add(back); 
+	}
+	
+	// listener class for button - changes to login page
+	class BListener implements ActionListener
+	{
+		public void actionPerformed(ActionEvent evt)
+		{
+			cards.show(bmh, "Login"); 
+		}
+	}
+}
+
+// panel that is actually the game; the top is essentially the return 
+// button and a JLabel that changes depending on where the user is; the
+// center is a CardLayout with 9 cards that change when the user moves; 
+// the south is a TextArea that provides information on what is going on 
+// in the game; BorderLayout (w/ North, Center, South)
+class GamePanelHolder extends JPanel
+{
+	private BioMonHolder bmh; // instance of CardLayout container
+	private CardLayout cards; // instance of CardLayout
+	private JButton back; // JButton that goes back to start
+	private JLabel location; // JLabel that changes depending on where the user is
+	public GamePanelHolder(BioMonHolder bmhIn, CardLayout cardsIn)
+	{
+		setLayout(new BorderLayout()); 
+		setBackground(new Color(237, 80, 80)); 
+		bmh = bmhIn; 
+		cards = cardsIn; 
+		
+		Font titleFont = new Font("Monospaced", Font.BOLD, 40); 
+		Font buttonFont = new Font("TimesRoman", Font.PLAIN, 20); 
+		
+		HeadingPanel hp = new HeadingPanel(); 
+		add(hp, BorderLayout.NORTH); 
+		//GamePanel gp = new GamePanel(); 
+		//add(gp, BorderLayout.CENTER); 
+		ScenePanel sp = new ScenePanel(); 
+		add(sp, BorderLayout.SOUTH); 
+	}
+	
+	// GridLayout (2x1); top is JButton that allows user to go back; bottom
+	// is JLabel with location info
+	class HeadingPanel extends JPanel
+	{
+		public HeadingPanel()
+		{
+			setLayout(new GridLayout(2, 1));
+			setBackground(new Color(237, 80, 80));
+			Font titleFont = new Font("Monospaced", Font.BOLD, 40); 
+			Font buttonFont = new Font("TimesRoman", Font.PLAIN, 20);  
+			
+			back = new JButton("Back"); 
+			BListener bl = new BListener(); 
+			back.addActionListener(bl);
+			back.setFont(buttonFont); 
+			add(back); 
+			
+			JPanel locationPanel = new JPanel();
+			locationPanel.setBackground(new Color(237, 80, 80)); 
+			locationPanel.setLayout(new FlowLayout(FlowLayout.CENTER)); 
+			JLabel location = new JLabel("You are currently in: ???"); 
+			location.setFont(titleFont); 
+			locationPanel.add(location); 
+			add(locationPanel); 
+		}
+		
+		// listener class for back button - goes to start panel
+		class BListener implements ActionListener
+		{
+			public void actionPerformed(ActionEvent evt)
+			{
+				cards.show(bmh, "Start"); 
+			}
+		}
+	}
+	
+	// contains the JTextArea that explains what's going on in the game - 
+	// cutscenes, challenges, etc. 
+	class ScenePanel extends JPanel
+	{
+		public ScenePanel()
+		{
+			setLayout(new FlowLayout(FlowLayout.CENTER));
+			setBackground(new Color(237, 80, 80)); 
+			Font buttonFont = new Font("TimesRoman", Font.PLAIN, 20); 
+			JTextArea scene = new JTextArea("scene info here");
+			scene.setFont(buttonFont); 
+			scene.setPreferredSize(new Dimension(750, 300)); 
+			add(scene);
+		}
+	}
+}
+
+// contains getter-setter methods that can be used to check what the user
+// has done
+class Information
+{
+	private boolean logged; // checks if user has entered their username
+	private String name; // stores username
+	public Information()
+	{
+	}
+	public void setLogged(boolean loggedIn)
+	{
+		logged = loggedIn; 
+	}
+	public boolean getLogged()
+	{
+		return logged; 
+	}
+	public void setName(String nameIn)
+	{
+		name = nameIn; 
+	}
+	public String getName()
+	{
+		return name; 
+	}
+}
