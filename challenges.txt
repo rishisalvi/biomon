@@ -1,0 +1,104 @@
+CHALLENGE #1: The nearby volcano is going to explode! If it does so, the 
+entire world of BioMon will be destroyed. You need to prevent that from 
+happening. 
+
+Go find a creature that is suited to hot, dry climates like the 
+ones found next to the volcano!
+- Embertor: small lizard-like creature that needs warm soil to incubate young
+- Aquarion: large amphibian found in dark, wet caves with minimal light
+- Mossleaf: deer-like creature found in lush forests with heavy vegetation
+- Glacestrike: bear-like mammal whose natural habitat is the polar Arctic
+
+CHALLENGE #2: An earthquake is hitting the forest region! If it can do enough 
+damage, most of the trees in the forest will fall down, destroying the ecosystem. 
+You need to prevent that from happening. 
+
+Go find a creature that is suited to an ecosystem that is stable (doesn't change easily). 
+- Panswipe: large gentle creature that sustains itself only on the magical zudu roots
+- Glacestrike: bear-like mammal whose natural habitat is the polar Arctic
+- Ratcher: small invasive rodent that has colonized most of the BioMon world
+- Sharktooth: large aquatic fish that lives exclusively in warm tropical waters
+
+CHALLENGE #3: The earthquake has triggered a tsunami off the coast! This can destroy
+the vital mangrove ecosystems that serve as a home for many organisms. You need to 
+prevent that from happening. 
+
+Go find a creature that is suited to equatorial waters, like the ones found on the coast. 
+- Glacestrike: bear-like mammal whose natural habitat is the polar Arctic
+- Sharktooth: large aquatic fish that lives exclusively in warm waters
+- Aquarion: large amphibian found in dark, wet caves with minimal light
+- Mossleaf: deer-like creature found in lush forests with heavy vegetation
+
+CHALLENGE #4: The predator-prey dynamics of BioMon have been disrupted, meaning 
+the prey populations of BioMon have exploded, damaging the vegetation in the area. 
+You need to prevent that from happening. 
+
+Go find a creature that can serve as a predator and restore the prey populations back down.
+- Ratcher: small invasive rodent that has colonized most of the BioMon world
+- Mossleaf: deer-like creature found in lush forests with heavy vegetation
+- Aquarion: large amphibian found in dark, wet caves with minimal light
+- Shadowclaw: agile animal that has a long claws and silent movements
+
+CHALLENGE #5: Humans are destroying the rainforest ecosystem in order to make 
+space for agriculture. This can be damaging to all of the organisms that need 
+the ecosystem as habitat and for resources. You need to prevent that from happening. 
+
+Go find a creature that will be susceptible to habitat destruction in the forests. 
+- Mossleaf: deer-like creature found in lush forests with heavy vegetation
+- Aquarion: large amphibian found in dark, wet caves with minimal light
+- Ratcher: small invasive rodent that has colonized most of the BioMon world
+- Glacestrike: bear-like mammal whose natural habitat is the polar Arctic
+
+CHALLENGE #6: The world of BioMon has been contaminated with organisms from the 
+nearby mainland's high school. These organisms are r-selected (meaning they reproduce 
+fast and greatly), potentially expanding their territory across the entire world. 
+You need to prevent that from happening. 
+
+Go find a creature that could be responsible for this new colonization. 
+- Ratcher: small invasive rodent that has colonized most of the BioMon world
+- Groveback: large apelike creature that is native to forests 
+- Glacestrike: bear-like mammal whose natural habitat is the polar Arctic
+- Aquarion: large amphibian found in dark, wet caves with minimal light
+
+CHALLENGE #7: The earlier volcano released ash into the atmosphere that blocked 
+sunlight from reaching certain areas of the planet. This allowed certain areas, 
+like the Arctic, to become even colder, increasing their range. You need 
+to prevent that from happening. 
+
+Go find a creature that lives in the polar Arctic and could expand to these new territories.
+- Aquarion: large amphibian found in dark, wet caves with minimal light
+- Pollenbloom: small bird that is responsible for pollinating most of BioMon
+- Glacestrike: bear-like mammal whose natural habitat is the polar Arctic
+- Parasight: parasite that attaches to host, weakening it over time
+
+CHALLENGE #8: A herd of large organisms has been infected by a parasite that is 
+ravaging their population, especially their young. This can disrupt their predator's 
+population through bottom-up control. You need to prevent that from happening.
+
+Go find a creature that resembles that parasite and capture it. 
+- Parasight: parasite that attaches to host, weakening it over time
+- Pollenbloom: small bird that is responsible for pollinating most of BioMon
+- Spinloon: arachnid that lives alone in underground burrows 
+- Rockclaw: crab-like organism native to BioMon's coastal habitats
+
+CHALLENGE #9: The caves are being exploited by humans for the minerals, damaging 
+the organisms that live there. This can damage the sensitive organisms that aren't
+used to human interaction. You need to prevent that from happening.
+
+Go find a creature that is vulnerable to changes in this ecosystem due to their 
+specific adaptations. 
+- Rockclaw: crab-like organism native to BioMon's coastal habitats
+- Aquarion: large amphibian found in dark, wet caves with minimal light
+- Pollenbloom: small bird that is responsible for pollinating most of BioMon
+- Spinloon: arachnid that lives alone in underground burrows 
+
+CHALLENGE #10: The desert is being converted into agricultural land, fragmenting 
+a large part of the ecosystem. This prevents large, migratory animals from completing 
+their migration, negatively impacting their population. You need to prevent that 
+from happening. 
+
+Go find a creature that needs large, open expanses of land to thrive. 
+- Bifon: large boar that eats the roots of a certain zeston tree its entire life
+- Spinloon: arachnid that lives alone in underground burrows  
+- Thigon: predatory wildcat that stalks its prey for dozens of miles 
+- Rockclaw: crab-like organism native to BioMon's coastal habitats

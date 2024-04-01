@@ -1,0 +1,49 @@
+->Embertor: volcanoes warm up their surroundings through conduction, providing the warm soil
+Aquarion: volcanoes don't offer a lot of moisture due to the intense heat, making them not suitable for amphibians
+Mossleaf: volcanoes often aren't surrounded by stable, growing forests due to their unpredictable nature
+Glacestrike: volcanoes make the surrounding area much warmer, making it no place for Arctic creatures
+
+->Panswipe: having a narrow food source can make it hard to survive if the food source drastically decreases in size
+Glacestrike: the earthquake is in the forest, not the polar region (which is far away)
+Ratcher: invasive species tend to have wide niches that allow them to consume numerous food sources and thrive in a changing environment
+Sharktooth: again, the earthquake is in the forest, not at the coral reefs (which are far away as well)
+
+Glacestrike: the polar arctic is far from the equator (it is at the northmost of the world, while the trophics are at the bottom)
+->Sharktooth: warm waters are typically found in the trophics due to their high insolation
+Aquarion: the caves region (where it lives) is far inland and will not be affected by the tsunami
+Mossleaf: the forest region is not near the coast as well
+
+Ratcher: adding more invasive species (which are normally prey) will only further disrupt the ecosystem
+Mossleaf: deers are herbivores, so they are not predators and will not directly decrease the prey population
+Aquarion: a small amphibian will be unable to decrease the invasive species population
+->Shadowclaw: long claws and agility benefit an organism that consumes other organisms by making them easier to catch 
+
+->Mossleaf: since its natural habitat is lush forests, destruction to them will decrease its population due to it being K-selected
+Aquarion: cutting down of trees aboveground is not likely to affect ecosystems far belowground
+Ratcher: invasive species are r-selected, meaning they are not very likely to be as impacted by habitat destruction compared to other species
+Glacestrike: it lives in the poles which are far away from any forests humans might cut down for agriculture
+
+->Ratcher: invasive species are r-selected, meaning they will be able to colonize new areas relatively easy
+Groveback: apes are generally K-selected, meaning they will not be able to colonize like Ratcher
+Glacestrike: bears (especially ones that live in the Arctic) are not invasive species that can reproduce fast
+Aquarion: amphibians are very sensitive (specialists) and will not be able to live in new conditions
+
+Aquarion: it lives underground, so it wouldn't be affected by ash in the atmosphere
+Pollenbloom: due to its pollinating ability, it wouldn't be found in the flowerless Arctic
+->Glacestrike: it is native to the tundra biome, meaning it is sensitive to the conditions there
+Parasight: parasites are normally not able to survive in the cold temperatures of the Arctic
+
+->Parasight: it is a parasite, so it will hurt its host in order to survive
+Pollenbloom: it is not a parasite, so it wouldn't hurt the organism population
+Spinloon: it lives underground, making it not a parasite that would infect herds
+Rockclaw: it lives near the coast, which is not the normal place for the herds of organisms
+
+Rockclaw: it lives near the coast, not in caves
+->Aquarion: it is a specialized organism that would be extremely vulnerable to changes in its habitat
+Pollenbloom: pollinating means it has to live aboveground to reach the flowers
+Spinloon: while it lives underground, it doesn't specifically live in caves
+
+Bifon: it only eats from a certain tree, meaning it does not need to spread out to reach food
+Spinloon: it lives underground, so it is unlikely to be directly affected by the conversion of deserts
+->Thigon: it stalks its prey for a long time, meaning it covers large expanses of land
+Rockclaw: it does not need to move a lot due to its habitat being near the coast and it being relatively small

@@ -1,0 +1,161 @@
+dashjk ON 1
+dashjk ON 2
+fsdkdj ON 1
+fsdkdj ON 2
+fsdkdj ON 3
+adsf ON 1
+adsf ON 2
+adsf ON 3
+adsf ON 4
+rishi ON 4
+afsd ON 1
+rishi ON 4
+sad ON 4
+sa ON 1
+sad ON 5
+sad ON 6
+fds ON 1
+fds ON 2
+fds ON 3
+fds ON 4
+dsfad ON 4
+dsfad ON 4
+asdf ON 1
+fdsa ON 1
+dsaf ON 1
+if (counter % 3 == 1) 					{	 						challengeCounter++; // increments  						info.setChallenge(challengeCounter); 						FileReader fr = new FileReader(); 						PrintWriter writeUser = fr.printFile("users.txt"); 						writeUser.println(info.getName() + " " + info.getCutscenes() + " " + info.getChallenge()); 						writeUser.close(); 				if (counter % 3 == 1) 					{	 						challengeCounter++; // increments  						info.setChallenge(challengeCounter); 						FileReader fr = new FileReader(); 						PrintWriter writeUser = fr.printFile("users.txt"); 						writeUser.println(info.getName() + " " + info.getCutscenes() + " " + info.getChallenge()); 						writeUse	} ON 1
+dsfad ON 4 ON 1
+dsfad ON 4
+dfskj ON 1
+fdads ON 1
+fdads ON 2
+fdads ON 3
+ads ON 1
+ads ON 2
+asd ON 1
+asd ON 2
+afadsasds ON 1
+afadsasds ON 2
+System.out.println("here");kjj ON 1
+System.out.println("here");kjj ON 2
+fds ON 5
+dfds ON 1
+dfds ON 2
+fd ON 1
+fd ON 2
+fasdsf ON 1
+fasdsf ON 2
+fasdsf ON 3
+adsffds ON 1
+adsffds ON 2
+adsffds ON 3
+adsffds ON 4
+adsffds ON 5
+adsffds ON 6
+adsffds ON 7
+adsffds ON 8
+adsffds ON 9
+adsffds ON 10
+adsffds ON 11
+djdks ON 1
+rishi ON 1
+adsfds ON 1
+fdsakl ON 1
+jgjkh ON 1
+fdas ON 1
+fasd ON 1
+fda ON 1
+dasf ON 1
+fsad ON 1
+fads ON 1
+fgjdkgl ON 1
+dfd ON 1
+fadasfdasfdas ON 1
+adsfdasf ON 1
+dsa ON 1
+dsf ON 1
+fdasds ON 1
+sadfs ON 1
+afds ON 1
+das ON 1
+vcxz ON 1
+as ON 1
+sdaf ON 1
+adfs ON 1
+fgdf ON 1
+cereal ON 1
+cereal ON 2 
+cereal ON 3
+cerealpine ON 1
+cereal ON 4
+cereal ON 5
+cereal ON 6
+kjygdfsjghdasjkdkfkjlfhadsdsafmjfskjegjlhsfafkjldgkdfg ON 1
+sadf'fds ON 1
+fsdaf ON 1
+fdsaf ON 1
+asdfasd ON 1
+SDAFDF ON 1
+dfdsf ON 1
+ddfdgr ON 1
+dsfs ON 1
+dfs ON 1
+adsf' ON 1
+ok ON 1
+rusu ON 1
+sd ON 1
+dsfa ON 1
+dfdfs ON 1
+fdassdaf ON 1
+vadsf ON 1
+fddsa ON 1
+fdf ON 1
+rishi ON 2
+rishi ON 3
+re ON 1
+re ON 2
+dsfa ON 2
+fdsf ON 1
+dafss ON 1
+sa;fas ON 1
+w ON 10
+fsd ON 1
+ghkj ON 1
+dasf OFF 1
+dasf ON 1
+dasf OFF 1
+dasf ON 1
+dasf OFF 1
+dasf OFF 1
+Rishi ON 9
+dasf OFF 1
+dasf ON 1
+dasf OFF 1
+fdsa' ON 1
+fdsa' OFF 1
+Rishi ON 7
+Rishi ON 8
+Rishi ON 9
+Rishi ON 10
+the final week! ON 1
+the final week! ON 2
+the final week ON 1
+the final week ON 2
+the final week ON 10
+the final week ON 11
+THE FINAL WEEK ON 1
+THE FINAL WEEK ON 2
+THE FINAL WEEK ON 3
+THE FINAL WEEK ON 4
+final week! ON 1
+final week! ON 2
+final week! ON 3
+final week! ON 4
+final week! ON 5
+final week! ON 6
+final week! ON 7
+final week! ON 8
+final week! ON 9
+final week! ON 10
+final week! ON 11
+rishi ON 3

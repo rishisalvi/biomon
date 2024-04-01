@@ -1,0 +1,60 @@
+What creature that is suited to hot, dry climates like the ones found next to the volcano?
+Embertor
+Aquarion
+Mossleaf
+Glacestrike
+0
+What creature is suited to an ecosystem that is stable (doesn't change easily)?
+Panswipe
+Glacestrike
+Ratcher
+Sharktooth
+0
+What creature is suited to equatorial waters, like the ones found on the coast?
+Glacestrike
+Sharktooth
+Aquarion
+Mossleaf
+1
+What creature can serve as a predator and restore the prey populations back down?
+Ratcher
+Mossleaf
+Aquarion
+Shadowclaw
+3
+What creature will be susceptible to habitat destruction in the forests?
+Mossleaf
+Aquarion
+Ratcher
+Glacestrike
+0
+What creature could be responsible for this new colonization? 
+Ratcher
+Groveback
+Glacestrike
+Aquarion
+0
+What creature that lives in the polar Arctic and could expand to these new territories?
+Aquarion
+Pollenbloom
+Glacestrike
+Parasight
+2
+What creature resembles a potential parasite?
+Parasight
+Pollenbloom
+Spinloon
+Rockclaw
+0
+What creature is vulnerable to changes in this ecosystem due to their specific adaptations?
+Rockclaw
+Aquarion
+Pollenbloom
+Spinloon
+1
+What creature needs large, open expanses of land to thrive?
+Bifon
+Spinloon
+Thigon
+Rockclaw
+2

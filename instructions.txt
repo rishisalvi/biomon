@@ -1,0 +1,31 @@
+General
+Welcome to BioMon, a world where you can capture magical creatures in order to 
+complete challenges! 
+->BioMon are diverse and powerful creatures with the power to stop natural disasters 
+if given the opportunity to do so. 
+->Choose your character to navigate around this world and perform tasks for you! 
+->Complete the challenges and collect the creatures to win! 
+->This game can help you understand the importance of adaptations in organisms. 
+
+Gameplay
+Move your character around the map by pressing the WASD keys. 
+->'w' moves your character up the screen, 's' moves it down the screen, 
+'a' moves it to the left, and 'd' moves it to the right. 
+->Moving outside of the screen allows you to enter a new part of the map, 
+where you can find region exclusive BioMon. 
+->Move through the dialogue by clicking the 'SPACE' bar. 
+->Capture the creature by clicking it with your mouse 3 times when your character moves close to it.
+
+Challenges
+There are 10 objectives for you to complete. 
+->After each challenge, your progress will be saved under your username, 
+allowing you to continue where you left off the next time you want to play. 
+->Move to the creature and return it to the region that requires it. 
+-> There is a timed mode in which you must complete a challenge in the time you have selected for it.
+
+Quiz
+You will be faced with challenges, after which you would need to identify the 
+BioMon best suited to tackle it. 
+->After a quick confirming quiz, you are able to track down the creature and complete the challenges. 
+The quiz will pop up in a separate window and will need to be completed to carry on with the game. 
+->Getting the choice wrong prompts the quiz to explain your mistake before you can move. 
